@@ -3,9 +3,13 @@ print(start_mess)
 n=input('Выберите операцию: ')
 
 def input_two():
-    a=int(input('Введите число a: '))
-    b=int(input('Введите число b: '))
-    return a,b
+    a=(input('Введите число a: '))
+    while not a.isdigit():
+        a=input('Некорректные данные. Введите число: ')
+    b=(input('Введите число b: '))
+    while not b.isdigit():
+        b=input('Некорректные данные. Введите число: ')
+    return int(a),int(b)
 def sum():
     print('Вы выбрали операцию сложения a + b')
     a,b=input_two()
@@ -33,7 +37,7 @@ def fact(n):
         return n*fact(n-1)
     
 
-while not int(n)==6:
+while not n=='6':
     
     if n.isdigit():
         n=int(n)
@@ -49,6 +53,8 @@ while not int(n)==6:
         elif n==5:
            print('Вы выбрали операцию расчета факториала')
            a=input('Введите число для расчета факториала: ')
+           while not a.isdigit():
+               a=input('Некорректное значение. Введите число: ')
            res=fact(a)
         elif n>6:
             n=input('Вы ввели некорректное значение. Введите число: ')
