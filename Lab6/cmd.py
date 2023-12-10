@@ -76,7 +76,6 @@ class PythonShell:
 
 
 cmd=PythonShell()
-# commands=['ls', 'cd', 'mkdir', 'touch', 'remove', 'rmdir', 'fileopen', 'exit']
 commands={'ls':cmd.ls, 'cd':cmd.cd, 'mkdir':cmd.mkdir, 'touch':cmd.touch, 'remove':cmd.remove, 'rmdir':cmd.rmdir, 'fileopen':cmd.fileopen, 'exit':None}
 print(f'Приветствую Вас в симуляторе командной строки PythonShell.\nСписок доступных команд: {(", ").join(commands.keys())}')
 command=input().split(' ')
